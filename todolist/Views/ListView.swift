@@ -18,6 +18,7 @@ struct ListView: View {
                 NoItemsView()
                     .transition(AnyTransition.opacity.animation(.easeIn))
             } else {
+                // creates a list
                 List {
                     // loop on the items array to disp lay each index
                     ForEach(listViewModel.items) { item in
@@ -34,6 +35,7 @@ struct ListView: View {
                 .listStyle(PlainListStyle()) // alters the style of the todo list
             }
         }
+        // navigation title adds a title to top of navigation
         .navigationTitle("2DO")
         // this is how you add elements to the navigation bar
         .navigationBarItems(

@@ -49,12 +49,6 @@ class ListViewModel: ObservableObject {
     }
     
     func updateItem(item: ItemModel) {
-//        if let index = items.firstIndex { (exsistingItem) -> Bool in
-//            return exsistingItem.id == item.id
-//        } {
-//            // run this code
-//        }
-        
         if let index = items.firstIndex(where: { $0.id == item.id }) {
             items[index] = item.updateCompletion()
         }

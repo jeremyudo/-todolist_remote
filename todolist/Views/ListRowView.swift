@@ -12,7 +12,9 @@ struct ListRowView: View {
     let item: ItemModel // allows text in title to be dynamic
     
     var body: some View {
+        // HStack: aka horizontal stack is responsible for creating the checkmark
         HStack {
+            // Image adds an image which in this case i chose for it to be checkmark. after the checkmark on the same horizontal line, the title is added.  
             Image(systemName: item.isCompleted ? "checkmark.circle" : "circle")
                 .foregroundColor(item.isCompleted ? .green : .red)// this is how you add an image from the system(the image is a checkmark)
             Text(item.title)
